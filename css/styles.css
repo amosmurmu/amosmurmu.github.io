@@ -4,4 +4,9 @@
 @import 'tailwindcss/utilities';
 
 /* Your custom styles go here */
- 
+.custom-button {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
