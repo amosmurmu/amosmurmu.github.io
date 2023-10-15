@@ -9,6 +9,22 @@
 		<!-- this is tailwind -->	
 		<link rel="stylesheet" href="dist/tailwind.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+
+	/* Make the embedded iframe responsive */
+	.embed-responsive-16by9 {
+	  position: relative;
+	  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	  height: 0;
+	}
+
+	.embed-responsive-16by9 iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}</style>
 	</head>
 	<body>
 
@@ -37,15 +53,15 @@
 	    <div class="container">
 		<div class="text-center">
 		<h1 class="text-center">
-			<a class="nav-link" href="portfolio.html"> Portfolio</a>
+			 Portfolio
 		</h1>
 		</div>
 		<div class="text-center">
 			<p class="text-center">My Resume
-				<a class="navlink" href="/home/amos-murmu/Downloads/Amos_resume.pdf">Download</a>
+				<a class="navlink" href="/home/amos-murmu/Downloads/Amos_resume.pdf"  download="Amos_resume.pdf" >Download</a>
 			</p>
-			<p class="text-center">
-				<a class="navlink" href="portfolio.html">My Projects</a>
+			<p class="text-center">My Projects
+				<a class="navlink" href="portfolio.html">Here</a>
 			</p>
 
 		</div>
@@ -55,10 +71,10 @@
 
 	<!-- Contact Section -->
 	<section id="contact" class="py-5">
-	    <div class="container">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsU0HHZmRZ7-R6rWpzJDTIPN1rFFgjtPS9chICGiFG5FwBTQ/viewform?embedded=true" width="640" height="586" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-	    </div>
 
+	<div class="embed-responsive embed-responsive-16by9">
+	  <iframe class="embed-responsive-item" src="https://forms.gle/g6KRqtmiKE9sFL4Z7" frameborder="0" scrolling="yes" name="_self"  target="_self" ></iframe>
+	</div>
 
    	</section>
 	
