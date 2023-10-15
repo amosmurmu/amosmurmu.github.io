@@ -1,6 +1,6 @@
 # My Portfolio
 
-![Portfolio Screenshot]()
+![Portfolio Screenshot](/images/portfolio_ss.png)
 
 Welcome to my portfolio! This repository serves as a showcase of my work, projects, and skills. Here you can find a collection of my projects, along with descriptions and links to live demos or source code.
 
