@@ -10,5 +10,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16"
-  }
+  },
+  "name": "amosmurmu.github.io",
+  "description": "![Portfolio Screenshot](/images/portfolio_ss.png)",
+  "version": "1.0.0",
+  "main": ".postcssrc.js",
+  "author": "",
+  "license": "ISC"
 }
