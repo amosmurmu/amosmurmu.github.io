@@ -1,6 +1,6 @@
 # My Portfolio
 
-![Portfolio Screenshot](/images/portfolio_ss.png)
+![Portfolio Screenshot](/images/png)
 
 Welcome to my portfolio! This repository serves as a showcase of my work, projects, and skills. Here you can find a collection of my projects, along with descriptions and links to live demos or source code.
 
@@ -10,7 +10,6 @@ Welcome to my portfolio! This repository serves as a showcase of my work, projec
 - [Contact Information](#contact-information)
 
 ## About Me
-I'm young at heart , dumb in life decisions , passionate and hardworking , currently broke and always curious and a learner in life
 
 ## Skills
 Java , Kotlin , Android Development , Software Development 

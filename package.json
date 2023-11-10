@@ -3,7 +3,7 @@
     "bootstrap": "^5.3.2",
     "http-server": "^14.1.1",
     "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.5"
   },
   "scripts": {
     "build:css": "postcss css/styles.css -o dist/tailwind.css"
