@@ -10,8 +10,8 @@ const projects = [
     title: "Ecommerce Application",
     description: "An Ecommerce app built with Node",
     techStack: ["MongoDb", "Node", "Express"],
-    github: "https://github.com/amosmurmu/chat_app",
-    demo: "https://vaat-app.onrender.com/",
+    github: "https://github.com/amosmurmu/ecommerce",
+    demo: "https://ecommerce-production-3901.up.railway.app/",
   },
 ];
 
