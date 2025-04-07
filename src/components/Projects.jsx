@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: "Image Processing Service",
+    description: "A Image processing service with Nodejs",
+    techStack: ["TypeScript", "RESTAPI", "Redis", "BullMQ", "Node", "Express"],
+    github: "https://github.com/amosmurmu/image_processing_system",
+    demo: "https://image-processing-system-7j50.onrender.com/api/file",
+  },
+  {
     title: "RealTime Chat Application",
     description: "A minimalist chat app built with MERN stack",
     techStack: ["React", "Tailwind", "Node", "Express"],
