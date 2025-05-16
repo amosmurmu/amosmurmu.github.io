@@ -1,9 +1,8 @@
-import React from "react";
 
 export const About = () => {
   return (
     <div className="v-min-h">
-      <div className="bg-base-200 p-4 text-center rounded-lg mt-6 shadow-2xl">
+      <div className="font-serif bg-base-200 p-4 text-center rounded-lg mt-6 shadow-2xl">
         <h3 className="text-2xl font-semibold mb-2">Skills</h3>
         <ul className="">
           <li>

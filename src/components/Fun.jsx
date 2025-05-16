@@ -1,8 +1,7 @@
-import React from "react";
 
 export const Fun = () => {
   return (
-    <div className="diff aspect-[16/9] h-[300px] max-w-full mx-auto">
+    <div className="font-serif diff aspect-[16/9] h-[300px] max-w-full mx-auto">
       <div className="diff-item-1">
         <div className="bg-primary text-primary-content grid place-content-center text-9xl font-black">
           amos

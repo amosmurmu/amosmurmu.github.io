@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
@@ -42,7 +41,7 @@ export const Contact = () => {
               <FaGithub />
             </a>
             <a
-              href="https://twitter.com/amosmurmu"
+              href="https://twitter.com/amos_murmu"
               target="_blank"
               rel="noreferrer"
               className="text-2xl text-blue-500 hover:text-primary"

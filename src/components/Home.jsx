@@ -1,5 +1,3 @@
-import React from "react";
-
 const Home = () => {
   return (
     <div className="hero min-h-screen bg-base-100">
@@ -14,9 +12,9 @@ const Home = () => {
           </div>
         </div>
         {/* Text Content */}
-        <div className="max-w-md mb-6 md:mb-0">
-          <h1 className="text-5xl font-bold">Hi, I'm amosmurmu</h1>
-          <p className="py-6">
+        <div className="font-serif max-w-md mb-6 md:mb-0">
+          <h1 className="text-5xl font-bold">Hi, I&#39;m amosmurmu</h1>
+          <p className="font-serif py-6">
             Software Developer with a focus on backend development. Experience
             in Node.js, Express, RESTful APIs, and working with databases like
             MySQL, PostgreSQL, and MongoDB.
