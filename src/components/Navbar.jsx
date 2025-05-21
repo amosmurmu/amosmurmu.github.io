@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-xl font-bold">amos murmu</h1>
         <ul className="flex space-x-6 items-center">
-          {["Projects", "Contact"].map((item) => (
+          {["Projects", "Contact","Experience"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}

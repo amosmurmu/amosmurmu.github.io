@@ -4,7 +4,7 @@ const projects = [
     description: "A Image processing service with Nodejs",
     techStack: ["TypeScript", "RESTAPI", "Redis", "BullMQ", "Node", "Express"],
     github: "https://github.com/amosmurmu/image_processing_system",
-    demo: "https://image-processing-system-7j50.onrender.com/api/file",
+    demo: "https://image-processing-system-7j50.onrender.com",
   },
   {
     title: "RealTime Chat Application",
@@ -18,7 +18,7 @@ const projects = [
     description: "An Ecommerce app built with Node",
     techStack: ["MongoDb", "Node", "Express"],
     github: "https://github.com/amosmurmu/ecommerce",
-    demo: "https://ecommerce-production-3901.up.railway.app/",
+    demo: "https://ecommerce-04y9.onrender.com",
   },
 ];
 
