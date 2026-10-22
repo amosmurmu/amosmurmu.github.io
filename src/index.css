@@ -1,2 +1,60 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/roboto-mono";
+
+/* Solarized palette on warm paper bg */
+@theme {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono Variable", ui-monospace, SFMono-regular, monospace;
+
+  --color-paper: #fffdf7;
+  --color-sand: #eee8d5; /* tinted surfaces */
+  --color-ink: #073642; /* headings and strong text */
+  --color-body: #586e75; /* body text and metadata */
+  --color-line: rgb(147 161 161 / 0.35); /* borders and grid */
+  --color-accent: #268bd2; /* markers and blue underlin */
+  --color-accent-ink: #1f6aa0 /* dark blue text */;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behaviour: smooth;
+    }
+  }
+
+  body {
+    @apply bg-paper font-sans text-body antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-sand);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Square Grid Pattern */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(
+    ellipse 75% 100% at 72% 50%,
+    #000 25%,
+    transparent 100%
+  );
+}
