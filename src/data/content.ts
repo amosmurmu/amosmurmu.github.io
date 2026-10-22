@@ -16,6 +16,7 @@ export interface Project {
   description: string;
   techStack: string[];
   github: string;
+  highlights?: string[];
   demo?: string;
   featured?: boolean;
 }
@@ -25,14 +26,21 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
+  project?: string;
   description: string;
   skills: string[];
   kind: "open-source" | "work";
 }
 
-export interface SkillGroup {
+export interface ContactLink {
   label: string;
-  items: string[];
+  href: string;
+}
+
+export interface ContactRow {
+  label: string;
+  lead: string;
+  links: ContactLink[];
 }
 
 export const profile = {
@@ -71,18 +79,37 @@ export const resumeHref = "/resume.pdf";
 export const navItems: NavItem[] = [
   { label: "Experience", id: "experience" },
   { label: "Projects", id: "projects" },
-  { label: "Skills", id: "skills" },
+  { label: "Blog", id: "blog" },
   { label: "Contact", id: "contact" },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Fridge; A Distributed Cache Learning Project",
+    description:
+      "A Redis-inspired distributed cache, built from scratch to understand how systems like Redis work internally.",
+    highlights: [
+      "Custom binary protocol over TCP with message framing, supporting GET, SET, DEL and MGET.",
+      "Consistent hashing with virtual nodes routes keys across three cache nodes; the router fans out MGET and keeps an L1 cache.",
+      "TTL expiry, sampled-LRU eviction, and append-only-file persistence replayed when a node restarts.",
+      "Runs as a Docker Compose cluster. Benchmarked locally at ~37k requests/sec on L1-cached hot-key reads (P99 4.7 ms).",
+    ],
+    techStack: [
+      "TypeScript",
+      "Node.js",
+      "TCP sockets",
+      "Docker",
+      "Docker Compose",
+    ],
+    github: "https://github.com/amosmurmu/fridge",
+    featured: true,
+  },
   {
     title: "Image Processing Service",
     description: "An image processing service built with Node.js.",
     techStack: ["TypeScript", "REST API", "Redis", "BullMQ", "Node", "Express"],
     github: "https://github.com/amosmurmu/image_processing_system",
     demo: "https://image-processing-system-7j50.onrender.com",
-    featured: true,
   },
   {
     title: "RealTime Chat Application",
@@ -96,6 +123,42 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: 1,
+    role: "Frontend Developer",
+    company: "Techfanatic Private LLP",
+    project: "Kidsaarthi",
+    period: "Nov 2025 – Apr 2026",
+    description:
+      "Architected a modular React SPA with lazy-loaded routes and REST API integration, including authentication and session persistence. Designed RTK Query cache invalidation with tag types to cut redundant API calls, built reusable forms with React Hook Form and Zod, and shipped it as an offline-capable PWA with Vite and Workbox.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Tailwind CSS",
+      "Vite PWA",
+    ],
+    kind: "work",
+  },
+  {
+    id: 2,
+    role: "Frontend Developer",
+    company: "Techfanatic Private LLP",
+    project: "SiteHub Suite v2",
+    period: "Jul 2025 – Nov 2025",
+    description:
+      "Built core CRUD modules for multi-entity workflows with validation and error handling, plus authentication and session handling over REST APIs. Shared state through React Context, added Azure Maps geocoding and address suggestions, and integrated Stripe checkout for subscriptions.",
+    skills: [
+      "React",
+      "TypeScript",
+      "React Hook Form",
+      "Zod",
+      "Azure Maps",
+      "Stripe",
+    ],
+    kind: "work",
+  },
+  {
+    id: 3,
     role: "Open Source Contributor",
     company: "Directus",
     period: "May 2025",
@@ -105,17 +168,17 @@ export const experiences: Experience[] = [
     kind: "open-source",
   },
   {
-    id: 2,
+    id: 4,
     role: "Open Source Contributor",
     company: "Motion Canvas",
     period: "April 2025",
     description:
       "Implemented a new centerArrow prop for the Arrow component, letting users customize the arrow's center position, and updated the documentation with Motion Canvas internals.",
-    skills: ["JavaScript", "React", "Node.js", "MongoDB"],
+    skills: ["JavaScript", "TypeScript", "React"],
     kind: "open-source",
   },
   {
-    id: 3,
+    id: 5,
     role: "IT Teacher",
     company: "Ganpat University",
     period: "Jan 2024 – May 2024",
@@ -126,40 +189,39 @@ export const experiences: Experience[] = [
   },
 ];
 
-export const skills: SkillGroup[] = [
+export const contactRows: ContactRow[] = [
   {
-    label: "Backend",
-    items: [
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "MySQL",
-      "Redis",
-      "MongoDB",
-      "REST APIs",
-    ],
+    label: "Email",
+    lead: "Say hello at",
+    links: [{ label: profile.email, href: `mailto:${profile.email}` }],
   },
-  { label: "Frontend", items: ["React", "Tailwind CSS"] },
   {
-    label: "Languages",
-    items: [
-      "JavaScript",
-      "TypeScript",
-      "C",
-      "C++",
-      "Java",
-      "Bash",
-      "HTML",
-      "CSS",
-      "SQL",
+    label: "Creative",
+    lead: "My creative content is on",
+    links: [
+      {
+        label: "Instagram @amos.lens",
+        href: "https://instagram.com/amos.lens",
+      },
     ],
   },
   {
-    label: "CI/CD",
-    items: ["Docker", "Docker Compose", "Github Actions"],
+    label: "Chess",
+    lead: "I sometimes play on",
+    links: [
+      { label: "chess.com", href: "https://www.chess.com/member/rebulbul" },
+      { label: "lichess.org", href: "https://lichess.org/@/amosmurmu" },
+    ],
   },
   {
-    label: "Linux",
-    items: ["Arch Linux", "Debian", "Shell scripting", "Neovim / Vim"],
+    label: "Contests",
+    lead: "I also do competitive programming on",
+    links: [
+      {
+        label: "codeforces.com",
+        href: "https://codeforces.com/profile/amosmurmu",
+      },
+      { label: "atcoder.jp", href: "https://atcoder.jp/users/lancelot_007" },
+    ],
   },
 ];

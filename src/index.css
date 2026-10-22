@@ -12,7 +12,7 @@
   --color-ink: #073642; /* headings and strong text */
   --color-body: #586e75; /* body text and metadata */
   --color-line: rgb(147 161 161 / 0.35); /* borders and grid */
-  --color-accent: #268bd2; /* markers and blue underlin */
+  --color-accent: #268bd2; /* markers and blue underline */
   --color-accent-ink: #1f6aa0 /* dark blue text */;
 }
 
@@ -52,9 +52,12 @@
     linear-gradient(to right, var(--color-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
   background-size: 32px 32px;
-  mask-image: radial-gradient(
-    ellipse 75% 100% at 72% 50%,
-    #000 25%,
-    transparent 100%
-  );
+  -webkit-mask-image:
+    radial-gradient(ellipse 60% 60% at 0% 100%, transparent 30%, #000 100%),
+    radial-gradient(ellipse 60% 60% at 100% 0%, transparent 30%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(ellipse 60% 60% at 0% 100%, transparent 30%, #000 100%),
+    radial-gradient(ellipse 60% 60% at 100% 0%, transparent 30%, #000 100%);
+  mask-composite: intersect;
 }
