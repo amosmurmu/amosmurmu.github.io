@@ -64,7 +64,7 @@ export const featuredLink = {
 
 export const socials: SocialLink[] = [
   { id: "github", label: "GitHub", href: "https://github.com/amosmurmu" },
-  { id: "twitter", label: "Twitter", href: "https://twitter.com/amos_murmu" },
+  { id: "twitter", label: "X", href: "https://twitter.com/amos_murmu" },
   {
     id: "linkedin",
     label: "LinkedIn",
@@ -126,9 +126,9 @@ export const experiences: Experience[] = [
     role: "Frontend Developer",
     company: "Techfanatic Private LLP",
     project: "Kidsaarthi",
-    period: "Nov 2025 – Apr 2026",
+    period: "Nov 2025 – Mar 2026",
     description:
-      "Architected a modular React SPA with lazy-loaded routes and REST API integration, including authentication and session persistence. Designed RTK Query cache invalidation with tag types to cut redundant API calls, built reusable forms with React Hook Form and Zod, and shipped it as an offline-capable PWA with Vite and Workbox.",
+      "Architected a modular React SPA with lazy-loaded routes and REST API integration, including authentication and session persistence. Designed RTK Query cache invalidation with tag types to cut redundant API calls, built reusable forms with React Hook Form and Zod.",
     skills: [
       "React",
       "TypeScript",

@@ -19,10 +19,10 @@ export default function Experience() {
             className="grid gap-3 py-8 first:pt-0 last:pb-0 sm:grid-cols-[10rem_1fr] sm:gap-8"
           >
             <div className="font-mono text-xs">
-              <p className="text-ink">{e.period}</p>
-              <p className="mt-1 uppercase tracking-wider">
+              <p className="mt-1 uppercase text-ink tracking-wider">
                 {kindLabel[e.kind]}
               </p>
+              <p className="text-body">{e.period}</p>
             </div>
 
             <div>
@@ -30,6 +30,9 @@ export default function Experience() {
                 {e.role} <span className="font-normal text-body">at</span>{" "}
                 {e.company}
               </h3>
+              {e.project && (
+                <p className="mt-1 font-mono text-xs">Project: {e.project}</p>
+              )}
               <p className="mt-2 max-w-prose leading-relaxed">
                 {e.description}
               </p>

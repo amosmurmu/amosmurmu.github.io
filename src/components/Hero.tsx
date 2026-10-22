@@ -46,7 +46,7 @@ const linkClass =
 
 export default function Hero() {
   return (
-    <section id="home" className="py-10 sm:py-16">
+    <section id="home" className="py-10 sm:py-20">
       <div className="grid items-center gap-10 md:grid-cols-[1fr_auto] md:gap-12">
         {/* Info: plain paper and profile info */}
         <div className="order-2 md:order-1">

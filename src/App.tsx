@@ -1,6 +1,9 @@
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
+import Projects from "./components/Projects";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <main id="main" className="mx-auto max-w-[820px] px-5 sm:px-6">
         <Hero />
         <Experience />
+        <Projects />
+        <Contacts />
+        <Footer />
       </main>
     </>
   );
