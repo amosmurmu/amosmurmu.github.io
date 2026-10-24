@@ -16,7 +16,7 @@ function A({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-function Row({ label, children }: { label?: string; children: ReactNode }) {
+function Row({ children }: { label?: string; children: ReactNode }) {
   return (
     <li className="grid gap-1 py-5 first:pt-0 last:pb-0 sm:gap-8">
       {/* <p className="font-mono text-xs uppercase tracking-wider sm:pt-1"> */}
