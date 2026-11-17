@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "../data/content";
+import { petSay } from "../libs/pet";
+
+const linkClass = "transition-colors hover:text-ink";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,12 +25,27 @@ export default function Nav() {
         <ul className="hidden items-center gap-4 text-md sm:flex sm:gap-6">
           {navItems.map((item) => (
             <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className="transition-colors hover:text-ink"
-              >
-                {item.label}
-              </a>
+
+              {item.comingSoon ? (
+                <a
+                  href="#pet"
+                  className={linkClass}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    petSay("Coming soon");
+                  }}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <a
+                  href={`#${item.id}`}
+                  className={linkClass}
+                >
+                  {item.label}
+                </a>
+              )}
+
             </li>
           ))}
         </ul>
@@ -68,6 +86,6 @@ export default function Nav() {
           </ul>
         )}
       </nav>
-    </header>
+    </header >
   );
 }

@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import PetDog from "./components/PetDog";
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
         <Projects />
         <Contacts />
         <Footer />
+
       </main>
+
+      <PetDog />
     </>
   );
 }
